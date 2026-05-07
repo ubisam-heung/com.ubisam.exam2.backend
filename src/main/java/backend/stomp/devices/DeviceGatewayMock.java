@@ -1,9 +1,11 @@
-package backend.rest.devices;
+package backend.stomp.devices;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
+
+import backend.rest.devices.DeviceGateway;
 
 @Component
 @ConditionalOnProperty(name = "farm.device.gateway", havingValue = "mock")
