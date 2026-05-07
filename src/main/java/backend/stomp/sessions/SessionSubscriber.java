@@ -42,5 +42,10 @@ public class SessionSubscriber implements WebsocketStompClientHandler{
     e.setTimestamp(timestamp);
     sRepository.save(e);
   }
+
+  @Override
+  public String getDestination() {
+    return properties.getSubscriptions().get("sessions");
+  }
   
 }
